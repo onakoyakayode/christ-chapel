@@ -93,40 +93,46 @@ export function SiteHeader() {
         <Link
           href="/"
           className="text-sm font-medium hover:underline underline-offset-4"
+          onClick={() => setIsOpen(false)}
         >
           Home
         </Link>
         <Link
           href="/about"
           className="text-sm font-medium hover:underline underline-offset-4"
+          onClick={() => setIsOpen(false)}
         >
           About Us
         </Link>
         <Link
           href="/sermons"
           className="text-sm font-medium hover:underline underline-offset-4"
+          onClick={() => setIsOpen(false)}
         >
           Sermons
         </Link>
         <Link
           href="/gallery"
           className="text-sm font-medium hover:underline underline-offset-4"
+          onClick={() => setIsOpen(false)}
         >
           Gallery
         </Link>
         <Link
           href="/events"
           className="text-sm font-medium hover:underline underline-offset-4"
+          onClick={() => setIsOpen(false)}
         >
           Events
         </Link>
         <Link
           href="/contact"
           className="text-sm font-medium hover:underline underline-offset-4"
+          onClick={() => setIsOpen(false)}
         >
           Contact
         </Link>
-        <Link href="/give">
+        <Link href="/give" onClick={() => setIsOpen(false)}>
           {" "}
           {/* Updated Link for Give Online */}
           <Button className="flex md:inline-flex h-11 cursor-pointer">

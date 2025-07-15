@@ -22,7 +22,7 @@ export default function VersePopup({ verse, reference }: VersePopupProps) {
   if (!showPopup) return null;
 
   return (
-    <div className="animate-fade-in-delay fixed sm:top-16 md:top-auto md:bottom-4 right-3 lg:right-4 z-50 w-full max-w-[16rem] lg:max-w-sm animate-fade-in">
+    <div className="animate-fade-in-delay fixed top-16 md:top-auto md:bottom-4 right-3 lg:right-4 z-50 w-full max-w-[16rem] lg:max-w-sm animate-fade-in">
       <div className="bg-background/95 text-foreground p-4 lg:p-6 rounded-lg shadow-lg border border-border text-center dark:bg-muted dark:text-white">
         <h2 className="text-base lg:text-xl font-bold mb-4">
           📖 Verse of the Day
