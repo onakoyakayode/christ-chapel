@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     domains: [
       "picsum.photos",
@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       "plus.unsplash.com",
       "images.unsplash.com",
     ],
+  },
+
+  webpack(config) {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      "@": path.resolve(__dirname, "src"),
+    };
+
+    return config;
   },
 };
 
