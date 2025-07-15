@@ -1,103 +1,184 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { CalendarDays, BookOpen, Users, Handshake } from "lucide-react";
 
-export default function Home() {
+export default async function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* Hero Section */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section
+        className="relative w-full h-[700px] flex items-center justify-center text-center bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/christ-chapel.jpg?height=600&width=1920")',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 text-white space-y-4 px-4 md:px-6">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            Welcome to Christ Chapel Church
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            A place where faith grows, hope is renewed, and love connects us
+            all. Join our community.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/about">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="text-primary hover:bg-gray-100 h-12"
+              >
+                Learn More
+              </Button>
+            </Link>
+            <Link href="/sermons">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-white border-white hover:bg-white/20 bg-transparent h-12 cursor-pointer"
+              >
+                Watch Sermons
+              </Button>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-12 md:py-24 lg:py-32 bg-background lg:px-24">
+        <div className=" px-4 md:px-10 grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Our Mission & Values
+            </h2>
+            <p className="text-muted-foreground max-w-prose">
+              Christ Chapel Church is dedicated to spreading the love of Christ,
+              fostering spiritual growth, and serving our local and global
+              communities. We believe in the power of faith, the strength of
+              community, and the importance of compassion.
+            </p>
+            <Link href="/about">
+              <Button variant="link" className="px-0">
+                Read Our Full Story &rarr;
+              </Button>
+            </Link>
+          </div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/chapel-interior.jpg?height=400&width=600"
+            width={600}
+            height={400}
+            alt="Church interior"
+            className="rounded-lg object-cover w-full h-auto"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+
+      {/* Services & Events Section */}
+      <section className="py-12 md:py-24 lg:py-32 bg-muted lg:px-24">
+        <div className="px-4 md:px-10  text-center space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Join Us for Worship & Events
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            We offer various services and events throughout the week designed to
+            help you connect with God and others.
+          </p>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <Card>
+              <CardHeader>
+                <CalendarDays className="w-8 h-8 text-primary mb-2" />
+                <CardTitle>Sunday Service</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Join us every Sunday at 10:00 AM for inspiring worship and a
+                  powerful message.
+                </CardDescription>
+                <p className="mt-4 text-sm font-medium">10:00 AM - 11:30 AM</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <BookOpen className="w-8 h-8 text-primary mb-2" />
+                <CardTitle>Bible Study</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Deepen your understanding of the scriptures in our weekly
+                  Bible study groups.
+                </CardDescription>
+                <p className="mt-4 text-sm font-medium">
+                  Wednesdays at 7:00 PM
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Users className="w-8 h-8 text-primary mb-2" />
+                <CardTitle>Youth Group</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Engaging activities and discussions for our youth every Friday
+                  evening.
+                </CardDescription>
+                <p className="mt-4 text-sm font-medium">Fridays at 6:30 PM</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Handshake className="w-8 h-8 text-primary mb-2" />
+                <CardTitle>Community Outreach</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Participate in our initiatives to serve and support our local
+                  community.
+                </CardDescription>
+                <p className="mt-4 text-sm font-medium">
+                  Monthly events - check calendar
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Link href="/events">
+            <Button className="h-12">View All Events</Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-12 md:py-24 lg:py-32 lg:px-24 bg-primary text-primary-foreground">
+        <div className="px-4 md:px-10 text-center space-y-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Ready to Connect?
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg">
+            Whether you're new to faith or looking for a church home, we invite
+            you to connect with us.
+          </p>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-primary hover:bg-gray-100 h-12"
+            >
+              Contact Us
+            </Button>
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
