@@ -17,7 +17,7 @@ export default function SermonsPage() {
       date: "July 7, 2025",
       description:
         "A message on the liberating power of forgiveness and its role in our spiritual journey.",
-      link: "#", // Placeholder for sermon link
+      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder for sermon link
     },
     {
       title: "Building a Foundation of Faith",
@@ -25,7 +25,7 @@ export default function SermonsPage() {
       date: "June 30, 2025",
       description:
         "Exploring how to establish a strong and unshakeable faith in challenging times.",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=abc12345678",
     },
     {
       title: "Love Your Neighbor",
@@ -33,7 +33,7 @@ export default function SermonsPage() {
       date: "June 23, 2025",
       description:
         "An inspiring sermon on the practical application of loving our neighbors as ourselves.",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=abc12345678",
     },
     {
       title: "Finding Peace in the Storm",
@@ -41,7 +41,7 @@ export default function SermonsPage() {
       date: "June 16, 2025",
       description:
         "Discovering how to maintain inner peace and trust in God amidst life's difficulties.",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=abc12345678",
     },
     {
       title: "The Joy of Giving",
@@ -49,7 +49,7 @@ export default function SermonsPage() {
       date: "June 9, 2025",
       description:
         "Understanding the biblical principles of generosity and the blessings that come with giving.",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=abc12345678",
     },
   ];
 
@@ -79,7 +79,10 @@ export default function SermonsPage() {
                   {sermon.description}
                 </p>
                 <Link href={sermon.link} passHref>
-                  <Button variant="outline" className="w-full bg-transparent">
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent h-12"
+                  >
                     <PlayCircle className="w-4 h-4 mr-2" />
                     Watch/Listen
                   </Button>
