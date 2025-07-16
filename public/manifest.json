@@ -1,0 +1,24 @@
+{
+  "name": "Christ Chapel",
+  "short_name": "Christ Chapel",
+  "description": "A place of worship and community",
+  "version": "1.0.0",
+  "lang": "en-US",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
