@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Grace Community Church",
+  title: "Christ Chapel Parish",
   description:
-    "Welcome to Grace Community Church - A place of worship, community, and spiritual growth.",
+    "Welcome to Christ Chapel Parish - A place of worship, community, and spiritual growth.",
 };
 
 export default function RootLayout({
