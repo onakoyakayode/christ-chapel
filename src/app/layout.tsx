@@ -31,12 +31,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+        {/* Apple Touch Icons */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
+
+        {/* Android/Chrome */}
         <link
           rel="icon"
           type="image/png"
@@ -49,6 +55,13 @@ export default function RootLayout({
           sizes="512x512"
           href="/icon-512x512.png"
         />
+
+        {/* Additional mobile meta */}
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="icon" href="/favicon.ico" />
+
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body
