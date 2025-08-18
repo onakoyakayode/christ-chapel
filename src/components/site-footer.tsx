@@ -1,15 +1,15 @@
 import Link from "next/link";
 
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import Logo from "../assets/icons/rccg-logo.png";
+
 import Image from "next/image";
 
 export function SiteFooter() {
   return (
-    <footer className="flex flex-col gap-4 sm:flex-row py-8 w-full shrink-0 items-center px-4 md:px-6 lg:px-24 border-t bg-muted text-muted-foreground">
+    <footer className="flex flex-col gap-4 sm:flex-row py-5 w-full shrink-0 items-center px-4 md:px-6 lg:px-24 border-t bg-muted text-muted-foreground">
       <div className="flex items-center gap-2">
         <Image
-          src={Logo}
+          src="/rccg-logo.png"
           alt="Church Logo"
           width={100}
           height={100}

@@ -61,10 +61,12 @@ export default async function HomePage() {
               Our Mission & Values
             </h2>
             <p className="text-muted-foreground max-w-prose">
-              Christ Chapel Church is dedicated to spreading the love of Christ,
-              fostering spiritual growth, and serving our local and global
-              communities. We believe in the power of faith, the strength of
-              community, and the importance of compassion.
+              In alignment with the vision of RCCG Worldwide to pursue mission
+              work vigorously both locally and globally. RCCGBC Canada, under
+              the leadership of Pastor Bayo Adediran, then the Zonal Coordinator
+              of BC1(RCCG Grace Chapel) Vancouver and Pastor Victor Folorunsho
+              (RCCG Faith Chapel) Prince George initiated the planting of a new
+              parish in Kelowna BC.
             </p>
             <Link href="/about">
               <Button variant="link" className="px-0">

@@ -26,19 +26,36 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
             <p className="text-muted-foreground">
-              Christ Chapel Parish began with a small group of believers in
-              19XX, united by a shared vision to create a welcoming space for
-              worship and spiritual growth. Over the years, we have grown into a
-              vibrant community, committed to serving God and our neighbors. Our
-              journey has been one of faith, perseverance, and unwavering
-              dedication to the teachings of Christ.
+              In alignment with the vision of RCCG Worldwide to pursue mission
+              work vigorously both locally and globally. RCCGBC Canada, under
+              the leadership of Pastor Bayo Adediran, then the Zonal Coordinator
+              of BC1(RCCG Grace Chapel) Vancouver and Pastor Victor
+              Folorunsho(RCCG Faith Chapel) Prince George initiated the planting
+              of a new parish in Kelowna BC.
             </p>
             <p className="text-muted-foreground">
-              From humble beginnings in a rented hall, we now stand in our
-              beautiful church building, a testament to God's grace and the
-              generosity of our congregation. We continue to build on this
-              legacy, always looking for new ways to impact lives and spread the
-              message of hope.
+              To shepherd the new parish, Pastor Olatunde KUKU and Pastor (Mrs.)
+              Fadekemi KUKU, both Pastors from RCCG Nigeria, were invited to
+              take up the assignment in Kelowna. We arrived in Canada on
+              November 15, 2014, and after spending some weeks in RCCG Faith
+              Chapel Prince George, hosted by Pastor and Pastor (Mrs.) Folorunso
+              we proceeded to Kelowna on December 8 to begin the work.
+            </p>
+            <p className="text-muted-foreground">
+              Upon our arrival, we discovered that the family that supposed to
+              receive us, already left Kelowna for another province and city.
+              However, God gave us a wonderful Sister Shereese Wilson who
+              started with us and with her we experienced a wonderful beginning.
+              Though the beginning was challenging but in all God was faithful.
+            </p>
+            <p className="text-muted-foreground">
+              The first service of RCCG Christ Chapel was held on February 3,
+              2015, in one of the small halls at Rutland Centennial Park. The
+              inaugural service was attended by three adults. Brother Samuel
+              Okoli later joined us. Then God started adding to us even till
+              today. The parish was officially inaugurated on May , 2016.
+              Shortly before the inauguration we moved to 160-160B Rutland Road
+              North, where we are till this moment. Glory be to God.
             </p>
           </div>
           <Image
@@ -104,11 +121,11 @@ export default function AboutPage() {
             <Card className="text-center">
               <CardContent className="flex flex-col items-center p-6">
                 <Image
-                  src="/face.jpg?height=150&width=150"
+                  src="/face.jpg"
                   width={150}
                   height={150}
                   alt="Pastor John Doe"
-                  className="rounded-full object-cover mb-4"
+                  className="rounded-full object-cover mb-4 w-60 h-60"
                 />
                 <CardTitle className="text-xl">Pastor John Doe</CardTitle>
                 <CardDescription>Lead Pastor</CardDescription>
@@ -126,7 +143,7 @@ export default function AboutPage() {
                   width={150}
                   height={150}
                   alt="Sarah Smith"
-                  className="rounded-full object-cover mb-4"
+                  className="rounded-full object-cover mb-4 w-60 h-60"
                 />
                 <CardTitle className="text-xl">Sarah Smith</CardTitle>
                 <CardDescription>Youth Director</CardDescription>
@@ -143,7 +160,7 @@ export default function AboutPage() {
                   width={150}
                   height={150}
                   alt="Michael Brown"
-                  className="rounded-full object-cover mb-4"
+                  className="rounded-full object-cover mb-4 w-60 h-60"
                 />
                 <CardTitle className="text-xl">Michael Brown</CardTitle>
                 <CardDescription>Worship Leader</CardDescription>
@@ -160,7 +177,7 @@ export default function AboutPage() {
                   width={150}
                   height={150}
                   alt="Emily White"
-                  className="rounded-full object-cover mb-4"
+                  className="rounded-full object-cover mb-4 w-60 h-60"
                 />
                 <CardTitle className="text-xl">Emily White</CardTitle>
                 <CardDescription>

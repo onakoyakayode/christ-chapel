@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Logo from "../assets/icons/rccg-logo.png";
+
 import Image from "next/image";
 import { ThemeSwitcher } from "./Theme-switcher";
 import { Menu } from "lucide-react";
@@ -18,7 +18,7 @@ export function SiteHeader() {
       <Link href="/" className="flex i items-center gap-2">
         {/* <Church className="h-6 w-6 text-primary" /> */}
         <Image
-          src={Logo}
+          src="/rccg-logo.png"
           alt="Church Logo"
           width={100}
           height={100}
